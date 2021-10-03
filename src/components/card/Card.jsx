@@ -12,9 +12,9 @@ const Card = ({id, title, description}) => {
          <div className="wrapper">
             <h2>{title}</h2>
             <p>{description}</p>
-            <button
+            <a href="/"><button
             onClick={handleRemove}
-            >Remover</button>
+            >Remover</button></a>
          </div>         
       </div>
    )
