@@ -3,14 +3,13 @@ import Button from '../../components/button/Button';
 import Cards from '../../components/cards/Cards';
 import Form from '../../components/form/Form';
 import { api } from '../../services/api';
-import {geradorId} from '../../utils/geradorId'
 
 const Reminder = () => {
-
+   const [count, setCount] = useState(0)
    const [isAdd, setIsAdd] = useState(true)
    const [form, setForm] = useState(false)
    const [formData, setFormData] = useState({
-      id: geradorId(),
+      id: count,
       title:"",
       description:"",
    })
@@ -38,6 +37,7 @@ const Reminder = () => {
    const handleSave = () => {
       setForm(false)
       setIsAdd(true)
+      setCount(count + 1)
       api.post('/cards', formData)
       .then((response) => {
          if(response.status === 201) {
