@@ -1,0 +1,44 @@
+.container{
+   border: 2px solid #000;
+   width: 90%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: 0 5% 0 5%;
+   border-radius: 15px;
+   padding: 25px;
+}
+
+.form{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   width: 100%;
+}
+
+.row{
+   display: flex;
+   align-items: center;
+   width: 100%;
+}
+.columnLabel{
+   width: 25%;
+   text-align: right;
+}
+
+.columnInput{
+   width: 75%;
+}
+
+.form .row .columnLabel label{
+   font-weight: bold;
+   padding-right: 5px;
+   font-size: 1.4rem;
+}
+
+.form input{
+   font-size: 1.2rem;
+   padding: 5px;
+   margin: 5px;
+   width: 80%;
+}
