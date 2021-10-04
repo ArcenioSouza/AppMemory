@@ -1,57 +1,78 @@
-import React, { useState } from 'react'
-import {api} from "../../services/api"
+import React, { useState, useEffect } from "react";
+import Button from "../../components/button/Button";
+import CardNotes from "../../components/notes/Notes";
+import Form from "../../components/form/Form";
+import { api } from "../../services/api";
+import * as S from "./notes.module.css";
 
 const Notes = () => {
+  const [data, setData] = useState([]);
+  const [count, setCount] = useState(0);
+  const [updateApi, setUpdateApi] = useState(false);
+  const [isAdd, setIsAdd] = useState(true);
+  const [form, setForm] = useState(false);
 
-   const [count, setCount] = useState(0)
+  const [formData, setFormData] = useState({
+    id: count,
+    title: "",
+    description: "",
+  });
 
-   const [formData, setFormData] = useState({
-      id: count,
-      title: "",
-      description: "",
-   })
+  useEffect(() => {
+    api.get("/notes").then((response) => setData(response.data));
+  }, []);
 
-   useEffect(() => {
-      api.get("/notes").then((response) => setFormData(response.data))
-   }, [updateApi])
+  useEffect(() => {
+    api.get("/notes").then((response) => setData(response.data));
+  }, [updateApi]);
 
+  const handleOnChange = ({ target }) => {
+    const value = target.value;
+    const name = target.name;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-   const handleOnChange = ({target}) => {
-      const value = target.value
-      const name = target.name
-   }
+  const handleSave = () => {
+    setForm(false);
+    setIsAdd(true);
+    setCount(count + 1);
+    if (formData.title && formData.description !== "") {
+      api.post("/notes", formData).then((response) => {
+        if (response.status === 201) {
+          setUpdateApi(!updateApi);
+        }
+      });
+    } else {
+      alert("Preencha os campos do formulário para salvar seu card");
+    }
+  };
 
-   const handleSave = () => {
-      setForm(false)
-      setIsAdd(true)
-      setCount(count +1)
-   }
-
-   return (
-      <div className={S.container}>
-         <div className={S.form}>
-            {isAdd ? 
-            <Button texto="Adicionar Anotação" action={() => {
-               setForm(true) 
-               setIsAdd(false)
+  return (
+    <div className={S.container}>
+      <div className={S.form}>
+        {isAdd ? (
+          <Button
+            texto="Adicionar Anotação"
+            action={() => {
+              setForm(true);
+              setIsAdd(false);
             }}
-            />
-            :
-            <Button 
-               texto="Salvar Anotação" 
-               action={handleSave}
-            />
-            }
+          />
+        ) : (
+          <Button texto="Salvar Anotação" action={handleSave} />
+        )}
 
-            {form ? <Form onChange={handleOnChange} /> : ""}
-         </div>
-
-         <div className={S.cards}>
-            <Cards datas={data}/>
-         </div>
-         
+        {form ? <Form onChange={handleOnChange} /> : ""}
       </div>
-   )
-}
 
-export default Notes
+      <div className={S.cards}>
+        <CardNotes notes={data} />
+      </div>
+    </div>
+  );
+};
+
+export default Notes;

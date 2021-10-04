@@ -3,9 +3,9 @@ import styled from "styled-components";
 import { api } from "../../services/api";
 import Button from "../button/Button";
 
-const Card = ({ id, title, description }) => {
+const Note = ({ id, title, description }) => {
   const handleRemove = () => {
-    api.delete(`/cards/${id}`);
+    api.delete(`/notes/${id}`);
   };
 
   const Container = styled.div`
@@ -41,4 +41,4 @@ const Card = ({ id, title, description }) => {
   );
 };
 
-export default Card;
+export default Note;
