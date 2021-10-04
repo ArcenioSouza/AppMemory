@@ -33,7 +33,7 @@ const Note = ({ id, title, description }) => {
       <InfoCards>
         <h2>{title}</h2>
         <p>{description}</p>
-        <a href="/">
+        <a href="/notes">
           <Button texto="Remover" action={handleRemove}></Button>
         </a>
       </InfoCards>

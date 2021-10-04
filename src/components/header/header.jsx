@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import * as S from "./header.module.css";
 
 const Header = () => {
@@ -11,8 +12,8 @@ const Header = () => {
       </div>
       <div className={S.list}>
         <ul>
-          <li>Reminder</li>
-          <li>Notes</li>
+          <li><Link id={S.link} to="/">Reminder</Link></li>
+          <li><Link id={S.link} to="/notes">Notes</Link></li>
         </ul>
       </div>
     </div>

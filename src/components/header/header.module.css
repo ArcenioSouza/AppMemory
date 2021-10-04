@@ -48,3 +48,8 @@
   color: var(--third-color);
   background-color: #fff;
 }
+
+#link{
+  text-decoration: none;
+  color: var(--third-color);
+}
