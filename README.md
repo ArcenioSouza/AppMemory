@@ -1,70 +1,52 @@
-# Getting Started with Create React App
+# App MemoryCard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Projeto
 
-## Available Scripts
+O projeto consiste em um app para registrar lembretes e fazer anotações importantes que costumamos esquecer.
 
-In the project directory, you can run:
+## Objetivos de aprendizado com o projeto
 
-### `npm start`
+ - [ok] Praticar o uso do ReactJS;
+ - [ok] Aprender a consumir api com o axios;
+ - [ok] Aprender a organizar melhor meus components;
+ - [ok] Aprender a usar "CSS in JS" com styled-component;
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ ## Recursos utilizados
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+ - ReactJS;
+ - Javascript;
+ - HTML;
+ - CSS;
+ - styled-components;
+ - react-router-dom;
+ - prettier;
+ - useState;
+ - axios;
+ - json-server;
+ - useEffect.
 
-### `npm test`
+## Créditos
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+A idéia surgiu de uma aula da `imersãoDev da Alura`, onde podiamos registrar filmes que gostamos preenchendo um formulário.
+A partir disso pensei que seria interessante registrar lembretes e anotações ao invés de filmes.
+Assim surgiu o MemoryCard.
+Uma adaptação criada por mim `Arcenio Souza`.
 
-### `npm run build`
+## Como visualizar
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Faça um clone do repositório:
+```
+https://github.com/ArcenioSouza/AppMemory.git
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Faça as seguintes instalações:
+```
+Para instalar as dependências: 
+   npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para iniciar o json-server:
+   Use o comando "json-server --watch db.json" na pasta backend
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Para iniciar a aplicação:
+   Use o comando "npm run start" na pasta AppMemory
+```
