@@ -8,7 +8,7 @@ const Button = ({texto, action}) => {
       color: #fff;
       padding: 5px 20px 5px 20px;
       margin: 10px 0 10px 0;
-      border: 1px solid #000000;
+      border: 2px solid #fff;
       border-radius: 10px;
       font-size: 1rem;
       font-weight: bold;
