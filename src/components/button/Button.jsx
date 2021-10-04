@@ -13,6 +13,7 @@ const Button = ({texto, action}) => {
       font-size: 1rem;
       font-weight: bold;
       transition: 2s ease-in-out;
+      width: 200px;
    `
 
    return (

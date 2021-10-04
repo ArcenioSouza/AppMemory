@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import * as S from './reminder.module.css';
 import Button from '../../components/button/Button';
 import Cards from '../../components/cards/Cards';
 import Form from '../../components/form/Form';
@@ -38,28 +39,43 @@ const Reminder = () => {
       setForm(false)
       setIsAdd(true)
       setCount(count + 1)
-      api.post('/cards', formData)
-      .then((response) => {
-         if(response.status === 201) {
-            setUpdateApi(!updateApi)
-         }
-      })
+      if(formData.title && formData.description !== ""){
+         api.post('/cards', formData)
+         .then((response) => {
+            if(response.status === 201) {
+               setUpdateApi(!updateApi)
+            }
+         })
+      }
+      else{
+         alert('É necessário o preenchimento do formulário para salvar o card')
+      }
+      
    }
 
    return (
-      <div>
-         <section>
+      <div className={S.container}>
+         <div className={S.form}>
             {isAdd ? 
-            <Button texto="Adicionar" action={() => {
+            <Button texto="Adicionar card" action={() => {
                setForm(true) 
                setIsAdd(false)
-            }}/>
-         :
-            <Button texto="Salvar" action={handleSave}/>
-         }
-         {form ? <Form onChange={handleOnChange} /> : ""}
-         </section>
-         <Cards datas={data}/>
+            }}
+            />
+            :
+            <Button 
+               texto="Salvar card" 
+               action={handleSave}
+            />
+            }
+
+            {form ? <Form onChange={handleOnChange} /> : ""}
+         </div>
+
+         <div className={S.cards}>
+            <Cards datas={data}/>
+         </div>
+         
       </div>
    )
 }
