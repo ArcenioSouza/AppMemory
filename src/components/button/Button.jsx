@@ -1,9 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Button = ({texto, action}) => {
-
-   const Button = styled.button `
+const SButton = styled.button`
       background-color: var(--second-color);
       color: #fff;
       padding: 5px 20px 5px 20px;
@@ -14,15 +12,17 @@ const Button = ({texto, action}) => {
       font-weight: bold;
       transition: 2s ease-in-out;
       width: 200px;
-   `
+   `;
+
+const Button = ({texto, action}) => {
 
    return (
-      <Button
+      <SButton
       onClick={action}
       >
          {texto}
-      </Button>
+      </SButton>
    )
 }
 
-export default Button
+export default Button;
