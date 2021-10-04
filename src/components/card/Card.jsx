@@ -12,17 +12,18 @@ const Card = ({id, title, description}) => {
    const Container = styled.div `
       width: 300px;
       display: flex;
-      border: 2px solid #000;
+      border: 2px solid var(--third-color);
       border-radius: 25px;
       align-items: center;
       padding: 15px;
       margin: 5px;
-      background-color: var(--second-color);
-      color: #fff;
+      background-color: #fff;
+      color: var(--third-color);
    `
 
    const InfoCards = styled.div `
       display: flex;
+      flex-direction: column;
       justify-content: center;
       text-align: center;
       padding: 15px;

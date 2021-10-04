@@ -4,11 +4,11 @@ import styled from 'styled-components'
 const Button = ({texto, action}) => {
 
    const Button = styled.button `
-      background-color: var(--third-color);
+      background-color: var(--second-color);
       color: #fff;
       padding: 5px 20px 5px 20px;
       margin: 10px 0 10px 0;
-      border: 2px solid #fff;
+      border: 2px solid var(--third-color);
       border-radius: 10px;
       font-size: 1rem;
       font-weight: bold;

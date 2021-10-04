@@ -1,11 +1,11 @@
 import './App.css';
-import Header from './components/header';
+import Header from './components/header/header';
 import Reminder from './pages/reminder/Reminder';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      < Header />
       < Reminder />
     </div>
   );

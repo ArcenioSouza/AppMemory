@@ -1,5 +1,5 @@
 .container{
-   border: 2px solid #fff;
+   border: 2px solid var(--third-color);
    width: 90%;
    display: flex;
    align-items: center;
@@ -34,13 +34,15 @@
    font-weight: bold;
    padding-right: 5px;
    font-size: 1.4rem;
-   color: #fff;
+   color: var(--third-color);
 }
 
 .form .row .columnInput input{
    font-size: 1.2rem;
-   padding: 5px;
+   border: 2px solid var(--third-color);
+   border-radius: 15px;
+   padding: 5px 0 5px 10px;
    margin: 5px;
    width: 80%;
-   color: #000;
+   color: var(--third-color);
 }
