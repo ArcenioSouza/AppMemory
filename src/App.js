@@ -1,4 +1,3 @@
-import "./App.css";
 import Header from "./components/header/header";
 import Notes from "./pages/notes/Notes";
 import Reminder from "./pages/reminder/Reminder";

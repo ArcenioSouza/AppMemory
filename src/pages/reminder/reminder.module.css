@@ -19,3 +19,7 @@
   justify-content: center;
   margin-top: 15px;
 }
+
+h1 {
+  color: var(--third-color);
+}

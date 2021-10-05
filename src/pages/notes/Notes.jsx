@@ -66,6 +66,8 @@ const Notes = () => {
         )}
 
         {form ? <Form onChange={handleOnChange} /> : ""}
+        <br />
+        <h1>Notes Cards</h1>
       </div>
 
       <div className={S.cards}>

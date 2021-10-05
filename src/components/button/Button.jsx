@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-const SButton = styled.button`
+const StyledButton = styled.button`
   background-color: var(--second-color);
   color: #fff;
   padding: 5px 20px 5px 20px;
@@ -15,7 +15,7 @@ const SButton = styled.button`
 `;
 
 const Button = ({ texto, action }) => {
-  return <SButton onClick={action}>{texto}</SButton>;
+  return <StyledButton onClick={action}>{texto}</StyledButton>;
 };
 
 export default Button;
