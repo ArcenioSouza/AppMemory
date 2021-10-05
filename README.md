@@ -44,9 +44,8 @@ Faça as seguintes instalações:
 Para instalar as dependências: 
    npm install
 
-Para iniciar o json-server:
-   Use o comando "json-server --watch db.json" na pasta backend
-
 Para iniciar a aplicação:
    Use o comando "npm run start" na pasta AppMemory
 ```
+O app pode ser visualizado em funcionamento através desse link:
+[https://app-memorycard.netlify.app/](https://app-memorycard.netlify.app/)
