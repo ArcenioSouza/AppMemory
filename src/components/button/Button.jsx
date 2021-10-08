@@ -14,8 +14,8 @@ const StyledButton = styled.button`
   width: 200px;
 `;
 
-const Button = ({ texto, action }) => {
-  return <StyledButton onClick={action}>{texto}</StyledButton>;
+const Button = ({ id, texto, action }) => {
+  return <StyledButton id={id} onClick={action}>{texto}</StyledButton>;
 };
 
 export default Button;

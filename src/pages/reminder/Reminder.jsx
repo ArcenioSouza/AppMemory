@@ -1,78 +1,52 @@
 import React, { useEffect, useState } from "react";
-import * as S from "./reminder.module.css";
-import Button from "../../components/button/Button";
-import Cards from "../../components/cards/Cards";
+import EditForm from "../../components/form/EditForm"
 import Form from "../../components/form/Form";
 import { api } from "../../services/api";
 
+
 const Reminder = () => {
-  const [count, setCount] = useState(0);
-  const [isAdd, setIsAdd] = useState(true);
-  const [form, setForm] = useState(false);
-  const [formData, setFormData] = useState({
-    id: count,
-    title: "",
-    description: "",
-  });
 
-  const [data, setData] = useState([]);
-  const [updateApi, setUpdateApi] = useState(false);
-
+  //database recebe um useState com array vazio e é alimentado pelo useEffect.  
+  const [database, setDatabase] = useState([])
+  
   useEffect(() => {
-    api.get("/cards").then((response) => setData(response.data));
-  }, []);
+    api.get("/cards").then((response) => setDatabase(response.database))
+  }, [])
 
-  useEffect(() => {
-    api.get("/cards").then((response) => setData(response.data));
-  }, [updateApi]);
 
-  const handleOnChange = ({ target }) => {
-    const value = target.value;
-    const name = target.name;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  //controle dos forms.
+  /* const [form, setForm] = useState(false)
+  const [editForm, setEditForm] = useState(false) */
 
-  const handleSave = () => {
-    setForm(false);
-    setIsAdd(true);
-    setCount(count + 1);
-    if (formData.title && formData.description !== "") {
-      api.post("/cards", formData).then((response) => {
-        if (response.status === 201) {
-          setUpdateApi(!updateApi);
-        }
-      });
-    } else {
-      alert("É necessário o preenchimento do formulário para salvar o card");
-    }
-  };
 
   return (
-    <div className={S.container}>
-      <div className={S.form}>
-        {isAdd ? (
-          <Button
-            texto="Adicionar Lembrete"
-            action={() => {
-              setForm(true);
-              setIsAdd(false);
-            }}
-          />
-        ) : (
-          <Button texto="Salvar Lembrete" action={handleSave} />
-        )}
-        {form ? <Form onChange={handleOnChange} /> : ""}
-        <br />
-        <h1>Reminder Cards</h1>
+    database.forEach(data => {
+      <div>
+        <h1>{data.title}</h1>
+        <p>{data.description}</p>
       </div>
-
-      <div className={S.cards}>
-        <Cards datas={data} />
+      
+    })
+    /* <div>
+      <div>
+        
+        
       </div>
-    </div>
+      <h1>Reminder Cards</h1>      
+      {database.map((data, index) => {
+          return (
+            <div key={index}>
+              <h2>{data.title}</h2>
+              <p>{data.description}</p> 
+              <button>Remover</button> 
+              <button onClick={setEditForm(true)}>Alterar</button>
+            </div>
+        );
+      })}
+      <button type='button' onClick={setForm(true)}>Adicionar card</button>
+      {form ? <Form /> : ""}
+      {editForm ? <EditForm /> : ""}
+    </div> */
   );
 };
 
