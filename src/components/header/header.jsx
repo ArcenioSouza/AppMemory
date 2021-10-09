@@ -27,33 +27,40 @@ const Ul = styled.ul `
   list-style: none;
 `
 
-const Li = styled.li `
+const H1 = styled.h1 `
+  color: #fff;
+`
+const StyledLink = styled(Link)`
   display: inline;
-  font-size: 1.5rem;
   padding: 10px 20px 10px 20px;
+  font-size: 1.5rem;
   margin-right: 40px;
   border: 2px solid var(--third-color);
   border-radius: 15px;
   color: var(--third-color);
   background-color: #fff;
   font-weight: bold;
-  box-shadow: 10px -5px var(--third-color);
-`
-
-const H1 = styled.h1 `
-  color: #fff;
-`
-const StyledLink = styled(Link)`
+  box-shadow: 3px -3px var(--third-color);
   text-decoration: none;
+  transition: 0.3s ease-in-out;
   color: var(--third-color);
+  :hover{
+      cursor: pointer;
+      background-color: var(--third-color);
+      color: #fff;
+    }
 `
 const Span = styled.span `
   border: 2px solid var(--third-color);
   padding: 5px;
   border-radius: 10px;
-  box-shadow: 10px -5px var(--third-color);
+  box-shadow: 3px -3px var(--third-color);
   color: var(--third-color);
   background-color: #fff;
+  transition: 0.2s ease-in-out;
+  :hover{
+      letter-spacing: 5px;
+    }
 `
 
 const Header = () => {
@@ -66,8 +73,8 @@ const Header = () => {
       </Title>
       <List>
         <Ul>
-          <Li><StyledLink to="/">Reminder</StyledLink></Li>
-          <Li><StyledLink to="/notes">Notes</StyledLink></Li>
+          <StyledLink to="/">Reminder</StyledLink>
+          <StyledLink to="/notes">Notes</StyledLink>
         </Ul>
       </List>
     </Container>

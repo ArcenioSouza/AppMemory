@@ -70,7 +70,9 @@ const Reminder = () => {
       </div>
 
       <div className={S.cards}>
-        <Cards datas={data} />
+        <Cards 
+          datas={data}  
+        />
       </div>
     </div>
   );

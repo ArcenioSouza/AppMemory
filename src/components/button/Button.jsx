@@ -10,8 +10,13 @@ const StyledButton = styled.button`
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
-  transition: 2s ease-in-out;
+  transition: 0.6s ease-in-out;
   width: 200px;
+  :hover{
+      cursor: pointer;
+      background-color: #fff;
+      color: var(--third-color);
+    }
 `;
 
 const Button = ({ texto, action }) => {
