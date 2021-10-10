@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import { api } from "../../services/api";
 import { useState } from "react";
 import * as S from "./styledCard";
@@ -30,13 +29,13 @@ const Card = ({ id, title, description, updateApi, setUpdateApi, onClick }) => {
       <S.InfoCards>
         {isEdit ? (
           <>
-            <input
+            <S.Input
               type="text"
               name="title"
               value={input.title}
               onChange={handleOnChange}
             />
-            <textarea
+            <S.TextArea
               name="description"
               value={input.description}
               onChange={handleOnChange}
@@ -50,11 +49,16 @@ const Card = ({ id, title, description, updateApi, setUpdateApi, onClick }) => {
         )}
 
         <S.WrapperButtons>
-          <S.Button onClick={() => onClick(id)}>Remover</S.Button>
-          {isEdit ? (
+        {isEdit ? (
+          <>
+            <S.Button onClick={() => setIsEdit(false)}>Desfazer</S.Button>
             <S.Button onClick={handleSalvar}>Salvar</S.Button>
+          </>
           ) : (
+          <>
+            <S.Button onClick={() => onClick(id)}>Remover</S.Button>
             <S.Button onClick={() => setIsEdit(true)}>Editar</S.Button>
+          </>
           )}
         </S.WrapperButtons>
       </S.InfoCards>

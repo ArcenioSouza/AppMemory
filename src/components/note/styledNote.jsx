@@ -42,3 +42,27 @@ export const WrapperButtons = styled.div`
   justify-content: center;
   align-items: center;
 `;
+
+export const Input = styled.input`
+font-size: 1rem;
+  border: 2px solid var(--third-color);
+  border-radius: 10px;
+  padding: 5px 0 5px 10px;
+  margin: 5px;
+  color: var(--third-color);
+  :focus{
+    outline-color: #f02f2fce;
+  }
+`
+
+export const TextArea = styled.textarea`
+  font-size: 0.8rem;
+  border: 2px solid var(--third-color);
+  border-radius: 10px;
+  padding: 5px 0 5px 10px;
+  margin: 5px;
+  color: var(--third-color);
+  :focus{
+    outline-color: #f02f2fce;
+  }
+`

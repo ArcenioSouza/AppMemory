@@ -34,13 +34,13 @@ const Note = ({ id, title, description, updateApi, setUpdateApi }) => {
       <S.InfoCards>
         {isEdit ? (
           <>
-            <input
+            <S.Input
               name="title"
               type="text"
               value={editForm.title}
               onChange={handleOnChange}
             />
-            <textarea
+            <S.TextArea
               name="description"
               value={editForm.description}
               onChange={handleOnChange}
@@ -54,11 +54,16 @@ const Note = ({ id, title, description, updateApi, setUpdateApi }) => {
         )}
 
         <S.WrapperButtons>
-          <S.Button onClick={handleRemove}>Remover</S.Button>
-          {isEdit ? (
+        {isEdit ? (
+          <>
+            <S.Button onClick={() => setIsEdit(false)}>Desfazer</S.Button>
             <S.Button onClick={handleSalvar}>Salvar</S.Button>
+          </>
           ) : (
+          <>
+            <S.Button onClick={handleRemove}>Remover</S.Button>
             <S.Button onClick={() => setIsEdit(true)}>Editar</S.Button>
+          </>
           )}
         </S.WrapperButtons>
       </S.InfoCards>
