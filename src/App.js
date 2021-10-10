@@ -10,14 +10,14 @@ const Container = styled.div`
   align-items: center;
   padding: 20px 20px 20px 20px;
   background: rgb(187,115,224);
-  background: linear-gradient(121deg, rgba(187,115,224,1) 21%, rgba(255,141,219,1) 75%);
+  background: var(--gradient);
   width: 100%;
-  height: 100vh;
+  /* height: auto; */
 `;
 
 const Wrapper = styled.div `
   width: 99.8%;
-  height: 95vh;
+  height: 100vh;
   background: #fff;
   border-radius: 20px;
   box-shadow:  inset 0 0, 0 0 1em;

@@ -5,11 +5,11 @@ import styled from "styled-components"
 const Container = styled.div `
   width: 100%;
   height: 100px;
-  background-color: var(--second-color);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 4px solid var(--third-color);
 `
 
 const Title = styled.div `
@@ -28,39 +28,22 @@ const Ul = styled.ul `
 `
 
 const H1 = styled.h1 `
-  color: #fff;
+  color: #000;
+  font-family: var(--font-family1);
 `
 const StyledLink = styled(Link)`
   display: inline;
-  padding: 10px 20px 10px 20px;
-  font-size: 1.5rem;
-  margin-right: 40px;
-  border: 2px solid var(--third-color);
-  border-radius: 15px;
-  color: var(--third-color);
-  background-color: #fff;
-  font-weight: bold;
-  box-shadow: 3px -3px var(--third-color);
+  font-family: var(--font-family2);
+  font-size: 1.9rem;
+  font-weight: 600;
   text-decoration: none;
-  transition: 0.3s ease-in-out;
-  color: var(--third-color);
-  :hover{
-      cursor: pointer;
-      background-color: var(--third-color);
-      color: #fff;
-    }
-`
-const Span = styled.span `
-  border: 2px solid var(--third-color);
-  padding: 5px;
-  border-radius: 10px;
-  box-shadow: 3px -3px var(--third-color);
-  color: var(--third-color);
-  background-color: #fff;
-  transition: 0.2s ease-in-out;
-  :hover{
-      letter-spacing: 5px;
-    }
+  color: black;
+  padding: 31px 15px 10px 15px;
+  transition: padding-top 5s ease-in-out;
+  :hover{    
+    background-color: #6666665a;
+    border-bottom: 4px solid rgba(187,115,224,1);
+  }
 `
 
 const Header = () => {
@@ -68,12 +51,12 @@ const Header = () => {
     <Container>
       <Title>
         <H1>
-          App <Span>MemoryCard</Span>
+          MemoryCard
         </H1>
       </Title>
       <List>
         <Ul>
-          <StyledLink to="/">Reminder</StyledLink>
+          <StyledLink to="/">Reminders</StyledLink>
           <StyledLink to="/notes">Notes</StyledLink>
         </Ul>
       </List>

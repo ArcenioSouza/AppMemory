@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ephesis&display=swap');
+
 :root {
   --primary-color: #ffcebca9;
   --second-color: #f02f2fce;
   --third-color: #a02800;
+  --gradient: linear-gradient(121deg, rgba(187,115,224,1) 21%, rgba(255,141,219,1) 75%);
+  --font-family1: 'Pacifico', cursive;
+  --font-family2: 'Ephesis', cursive;
 }
 
 * {
