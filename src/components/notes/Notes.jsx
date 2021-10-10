@@ -1,7 +1,7 @@
 import React from "react";
 import Note from "../note/Note";
 
-const CardNotes = ({ notes }) => {
+const CardNotes = ({ notes, updateApi, setUpdateApi }) => {
   return (
     <div>
       {notes.map((note, index) => {
@@ -11,6 +11,8 @@ const CardNotes = ({ notes }) => {
             title={note.title}
             description={note.description}
             key={index}
+            updateApi={updateApi}
+          setUpdateApi={setUpdateApi}
           />
         );
       })}

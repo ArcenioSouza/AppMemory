@@ -71,7 +71,11 @@ const Notes = () => {
       </div>
 
       <div className={S.cards}>
-        <CardNotes notes={data} />
+        <CardNotes 
+          notes={data}
+          updateApi={updateApi}
+          setUpdateApi={setUpdateApi}
+        />
       </div>
     </div>
   );
