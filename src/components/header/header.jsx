@@ -9,7 +9,7 @@ const Container = styled.div `
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: 2px solid #fff;
+  border-bottom: 4px solid var(--third-color);
 `
 
 const Title = styled.div `

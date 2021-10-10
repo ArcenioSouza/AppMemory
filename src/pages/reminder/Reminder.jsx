@@ -17,13 +17,18 @@ const Reminder = () => {
 
   const [data, setData] = useState([]);
   const [updateApi, setUpdateApi] = useState(false);
+  const [load, setLoad] = useState(false);
 
   useEffect(() => {
+    setLoad(true);
     api.get("/cards").then((response) => setData(response.data));
+    setLoad(false);
   }, []);
 
   useEffect(() => {
+    setLoad(true);
     api.get("/cards").then((response) => setData(response.data));
+    setLoad(false);
   }, [updateApi]);
 
   const handleOnChange = ({ target }) => {
@@ -34,6 +39,10 @@ const Reminder = () => {
       [name]: value,
     });
   };
+
+  const handleRemove = (id) => {
+    api.delete(`/cards/${id}`).then(() => setUpdateApi(!updateApi))
+  }; 
 
   const handleSave = () => {
     setForm(false);
@@ -70,9 +79,19 @@ const Reminder = () => {
       </div>
 
       <div className={S.cards}>
-        <Cards 
-          datas={data}  
-        />
+        {load ? 
+        (
+          <p>Carregando</p>
+        ) 
+        : 
+        (
+          <Cards
+            updateApi={updateApi}
+            setUpdateApi={setUpdateApi}
+            datas={data}
+            onClick={handleRemove}
+          />
+        )}
       </div>
     </div>
   );

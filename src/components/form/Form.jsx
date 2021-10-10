@@ -44,11 +44,14 @@ const Label = styled.label`
 const Input = styled.input`
   font-size: 1.2rem;
   border: 2px solid var(--third-color);
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 5px 0 5px 10px;
   margin: 5px;
   width: 80%;
   color: var(--third-color);
+  :focus{
+    outline-color: #f02f2fce;
+  }
 `;
 
 const Form = ({ onChange }) => {

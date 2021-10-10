@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { api } from "../../services/api";
+import { useState } from "react";
 
 
 const Container = styled.div`
@@ -46,24 +47,56 @@ const Container = styled.div`
     }
   `
 
-const Card = ({ id, title, description }) => {
+const Card = ({ id, title, description, updateApi, setUpdateApi, onClick }) => {
+
+  const [isEdit, setIsEdit] = useState(false)
+  const [input, setInput] = useState({
+    title: title,
+    description: description
+  })
+
+  const handleOnChange = ({target}) => {
+    const name = target.name
+    const value = target.value
+    setInput({
+      ...input,
+      [name]: value
+      //name representa o target que está sendo feito a mudança, no caso se for no title, o name será = title e assim vai...
+    })
+  }
+
+ 
+
+  const handleSalvar = () => {
+    api.put(`/cards/${id}`, input).then(() => setUpdateApi(!updateApi))
+    setIsEdit(false)
+  }
+
   
-  const handleRemove = () => {
-    return api.delete(`/cards/${id}`);
-  }; 
 
   return (
     <Container>
       <InfoCards>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        {
+          isEdit ? 
+          (
+            <>
+              <input type="text" name="title" value={input.title} onChange={handleOnChange}/>
+              <textarea  name="description" value={input.description} onChange={handleOnChange}/>
+            </>
+          ) 
+          : 
+          (
+            <>
+              <h2>{title}</h2>
+              <p>{description}</p>
+            </>
+          )
+        }
+        
         <WrapperButtons>
-        <a href="/">
-          <Sbutton onClick={handleRemove}>Remover</Sbutton>
-        </a> 
-        <a href="/">
-          <Sbutton onClick={handleRemove}>Editar</Sbutton>
-        </a> 
+          <Sbutton onClick={() => onClick(id)}>Remover</Sbutton>  
+          {isEdit ? <Sbutton onClick={handleSalvar}>Salvar</Sbutton> : <Sbutton onClick={() => setIsEdit(true)}>Editar</Sbutton> }
         </WrapperButtons>                 
       </InfoCards>
     </Container>

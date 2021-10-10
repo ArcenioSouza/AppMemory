@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "../card/Card";
 
-const Cards = ({ datas }) => {
+const Cards = ({ datas, updateApi, setUpdateApi, onClick }) => {
   return (
     <div>
       {datas.map((data, index) => {
@@ -11,6 +11,9 @@ const Cards = ({ datas }) => {
             title={data.title}
             description={data.description}
             key={index}
+            updateApi={updateApi}
+            setUpdateApi={setUpdateApi}
+            onClick={onClick}
           />
         );
       })}
