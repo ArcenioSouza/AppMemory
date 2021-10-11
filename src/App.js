@@ -12,12 +12,11 @@ const Container = styled.div`
   background: rgb(187,115,224);
   background: var(--gradient);
   width: 100%;
-  /* height: auto; */
+  height: 100vh;
 `;
 
 const Wrapper = styled.div `
   width: 99.8%;
-  height: 100vh;
   background: #fff;
   border-radius: 20px;
   box-shadow:  inset 0 0, 0 0 1em;

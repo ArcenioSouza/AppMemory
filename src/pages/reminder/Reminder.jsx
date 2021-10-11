@@ -13,6 +13,9 @@ const Reminder = () => {
     id: count,
     title: "",
     description: "",
+    priority: "",
+    calendar: "",
+    horario: "",
   });
 
   const [data, setData] = useState([]);
@@ -43,7 +46,7 @@ const Reminder = () => {
     setForm(false);
     setIsAdd(true);
     setCount(count + 1);
-    if (formData.title && formData.description !== "") {
+    if (formData.title && formData.description && formData.priority !== "") {
       api.post("/cards", formData).then((response) => {
         if (response.status === 201) {
           setUpdateApi(!updateApi);
