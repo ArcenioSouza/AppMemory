@@ -19,5 +19,7 @@
 }
 
 h1 {
-  color: var(--third-color);
+  color: #000;
+  font-family: var(--font-family2);
+  font-size: 3rem;
 }

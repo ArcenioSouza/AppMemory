@@ -29,6 +29,7 @@ const Ul = styled.ul `
 
 const H1 = styled.h1 `
   color: #000;
+  font-size: 3rem;
   font-family: var(--font-family1);
 `
 const StyledLink = styled(Link)`
@@ -39,10 +40,11 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: black;
   padding: 31px 15px 10px 15px;
-  transition: padding-top 5s ease-in-out;
+  transition: 0.2s ease-in;
   :hover{    
-    background-color: #6666665a;
     border-bottom: 4px solid rgba(187,115,224,1);
+    background-color: #6666665a;
+    
   }
 `
 

@@ -36,8 +36,8 @@ const Reminder = () => {
   };
 
   const handleRemove = (id) => {
-    api.delete(`/cards/${id}`).then(() => setUpdateApi(!updateApi))
-  }; 
+    api.delete(`/cards/${id}`).then(() => setUpdateApi(!updateApi));
+  };
 
   const handleSave = () => {
     setForm(false);
@@ -74,12 +74,12 @@ const Reminder = () => {
       </div>
 
       <div className={S.cards}>
-          <Cards
-            updateApi={updateApi}
-            setUpdateApi={setUpdateApi}
-            datas={data}
-            onClick={handleRemove}
-          />
+        <Cards
+          updateApi={updateApi}
+          setUpdateApi={setUpdateApi}
+          datas={data}
+          onClick={handleRemove}
+        />
       </div>
     </div>
   );

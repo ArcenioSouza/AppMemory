@@ -2,13 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  border: 2px solid var(--third-color);
-  width: 90%;
+  border: 2px solid #000;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 5% 0 5%;
-  border-radius: 15px;
+  border-radius: 10px;
   padding: 25px;
 `;
 
@@ -38,19 +38,20 @@ const Label = styled.label`
   font-weight: bold;
   padding-right: 5px;
   font-size: 1.4rem;
-  color: var(--third-color);
+  color: #000;
 `;
 
 const Input = styled.input`
   font-size: 1.2rem;
-  border: 2px solid var(--third-color);
-  border-radius: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
   padding: 5px 0 5px 10px;
   margin: 5px;
   width: 80%;
-  color: var(--third-color);
+  background-color: #bc73e03b;;
+  color: #000;
   :focus{
-    outline-color: #f02f2fce;
+    outline-color: var(--primary-color);
   }
 `;
 

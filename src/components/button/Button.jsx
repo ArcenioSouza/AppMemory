@@ -6,7 +6,7 @@ const StyledButton = styled.button`
   color: #fff;
   padding: 5px 20px 5px 20px;
   margin: 10px 0 10px 0;
-  border: 2px solid var(--third-color);
+  border: 1px solid #000;
   border-radius: 10px;
   font-size: 1rem;
   font-weight: bold;
@@ -14,8 +14,8 @@ const StyledButton = styled.button`
   width: 200px;
   :hover{
       cursor: pointer;
-      background-color: #fff;
-      color: var(--third-color);
+      background-color: var(--primary-color);
+      color: #000;
     }
 `;
 

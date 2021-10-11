@@ -3,13 +3,15 @@ import styled from "styled-components";
 export const Container = styled.div`
   width: 300px;
   display: flex;
-  border: 2px solid var(--third-color);
-  border-radius: 25px;
   align-items: center;
   padding: 15px;
   margin: 5px;
-  background-color: #fff;
-  color: var(--third-color);
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid #000;
 `;
 
 export const InfoCards = styled.div`
@@ -25,15 +27,15 @@ export const Button = styled.button`
   color: #fff;
   padding: 5px 10px 5px 10px;
   margin-right: 10px;
-  border: 2px solid var(--third-color);
-  border-radius: 10px;
+  border: 1px solid #000;
+  border-radius: 5px;
   font-size: 1rem;
   font-weight: bold;
   transition: 0.6s ease-in-out;
   :hover {
     cursor: pointer;
-    background-color: #fff;
-    color: var(--third-color);
+    background-color: var(--primary-color);
+    color: #000;
   }
 `;
 
@@ -44,25 +46,25 @@ export const WrapperButtons = styled.div`
 `;
 
 export const Input = styled.input`
-font-size: 1rem;
-  border: 2px solid var(--third-color);
+  font-size: 1rem;
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 5px 0 5px 10px;
   margin: 5px;
-  color: var(--third-color);
-  :focus{
-    outline-color: #f02f2fce;
+  color: #000;
+  :focus {
+    outline-color: var(--primary-color);
   }
-`
+`;
 
 export const TextArea = styled.textarea`
-  font-size: 0.8rem;
-  border: 2px solid var(--third-color);
+  font-size: 1rem;
+  border: 1px solid #000;
   border-radius: 10px;
   padding: 5px 0 5px 10px;
   margin: 5px;
   color: var(--third-color);
-  :focus{
-    outline-color: #f02f2fce;
+  :focus {
+    outline-color: var(--primary-color);
   }
-`
+`;
