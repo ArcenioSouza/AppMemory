@@ -66,12 +66,13 @@ const FormNote = ({ onChange }) => {
             <Label htmlFor="title">Title: </Label>
           </ColumnLabel>
           <ColumnInput>
-            <Input 
-              type="text" 
-              name="title" 
-              id="title" 
+            <Input
+              type="text"
+              name="title"
+              id="title"
               placeholder="Título para o lembrete"
-              onChange={onChange} />
+              onChange={onChange}
+            />
           </ColumnInput>
         </Row>
         <Row>

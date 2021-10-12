@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components"
+import styled from "styled-components";
 
-const Container = styled.div `
+const Container = styled.div`
   width: 100%;
   height: 100px;
   border-top-left-radius: 20px;
@@ -10,28 +10,28 @@ const Container = styled.div `
   display: flex;
   align-items: center;
   justify-content: space-around;
-`
+`;
 
-const Title = styled.div `
+const Title = styled.div`
   width: 30%;
   padding-left: 50px;
-`
+`;
 
-const List = styled.div `
+const List = styled.div`
   width: 70%;
   display: flex;
   justify-content: center;
-`
+`;
 
-const Ul = styled.ul `
+const Ul = styled.ul`
   list-style: none;
-`
+`;
 
-const H1 = styled.h1 `
+const H1 = styled.h1`
   color: #000;
   font-size: 3rem;
   font-family: var(--font-family1);
-`
+`;
 const StyledLink = styled(Link)`
   display: inline;
   font-family: var(--font-family2);
@@ -41,20 +41,17 @@ const StyledLink = styled(Link)`
   color: black;
   padding: 31px 15px 10px 15px;
   transition: 0.2s ease-in;
-  :hover{    
-    border-bottom: 4px solid rgba(187,115,224,1);
+  :hover {
+    border-bottom: 4px solid rgba(187, 115, 224, 1);
     background-color: #6666665a;
-    
   }
-`
+`;
 
 const Header = () => {
   return (
     <Container>
       <Title>
-        <H1>
-          MemoryCard
-        </H1>
+        <H1>MemoryCard</H1>
       </Title>
       <List>
         <Ul>

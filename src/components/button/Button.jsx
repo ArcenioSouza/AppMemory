@@ -12,11 +12,11 @@ const StyledButton = styled.button`
   font-weight: bold;
   transition: 0.6s ease-in-out;
   width: 200px;
-  :hover{
-      cursor: pointer;
-      background-color: var(--primary-color);
-      color: #000;
-    }
+  :hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: #000;
+  }
 `;
 
 const Button = ({ texto, action }) => {

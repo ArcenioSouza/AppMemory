@@ -43,7 +43,7 @@ export const Button = styled.button`
 
 export const Icon = styled.i`
   margin-right: 3px;
-`
+`;
 
 export const WrapperButtons = styled.div`
   display: flex;

@@ -6,24 +6,24 @@ O projeto consiste em um app para registrar lembretes e fazer anotações import
 
 ## Objetivos de aprendizado com o projeto
 
- - [ok] Praticar o uso do ReactJS;
- - [ok] Aprender a consumir api com o axios;
- - [ok] Aprender a organizar melhor meus components;
- - [ok] Aprender a usar "CSS in JS" com styled-component;
+- [ok] Praticar o uso do ReactJS;
+- [ok] Aprender a consumir api com o axios;
+- [ok] Aprender a organizar melhor meus components;
+- [ok] Aprender a usar "CSS in JS" com styled-component;
 
- ## Recursos utilizados
+## Recursos utilizados
 
- - ReactJS;
- - Javascript;
- - HTML;
- - CSS;
- - styled-components;
- - react-router-dom;
- - prettier;
- - useState;
- - axios;
- - json-server;
- - useEffect.
+- ReactJS;
+- Javascript;
+- HTML;
+- CSS;
+- styled-components;
+- react-router-dom;
+- prettier;
+- useState;
+- axios;
+- json-server;
+- useEffect.
 
 ## Créditos
 
@@ -35,17 +35,20 @@ Uma adaptação criada por mim `Arcenio Souza`.
 ## Como visualizar
 
 Faça um clone do repositório:
+
 ```
 https://github.com/ArcenioSouza/AppMemory.git
 ```
 
 Faça as seguintes instalações:
+
 ```
-Para instalar as dependências: 
+Para instalar as dependências:
    npm install
 
 Para iniciar a aplicação:
    Use o comando "npm run start" na pasta AppMemory
 ```
+
 O app pode ser visualizado em funcionamento através desse link:
 [https://app-memorycard.netlify.app/](https://app-memorycard.netlify.app/)

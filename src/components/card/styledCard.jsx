@@ -53,7 +53,7 @@ export const Button = styled.button`
 
 export const Icon = styled.i`
   margin-right: 3px;
-`
+`;
 
 export const Input = styled.input`
   font-size: 1rem;
@@ -79,41 +79,41 @@ export const TextArea = styled.textarea`
   }
 `;
 
-export const StyledPriority = styled.div `
+export const StyledPriority = styled.div`
   display: flex;
   align-items: center;
   position: absolute;
   top: 0;
   right: 0;
   padding: 5px;
-`
+`;
 
-export const Pred = styled.p `
+export const Pred = styled.p`
   background-color: red;
   padding: 5px;
   margin-left: 5px;
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
-`
+`;
 
-export const Pgreen = styled.p `
+export const Pgreen = styled.p`
   background-color: green;
   padding: 5px;
   margin-left: 5px;
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
-`
+`;
 
-export const Porange = styled.p `
+export const Porange = styled.p`
   background-color: orange;
   padding: 5px;
   margin-left: 5px;
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
-`
+`;
 
 export const InputRadio = styled.input`
   font-size: 1.2rem;
@@ -145,7 +145,7 @@ export const ColumnInput = styled.div`
   align-items: center;
 `;
 
-export const StyledData = styled.div `
+export const StyledData = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -154,8 +154,8 @@ export const StyledData = styled.div `
   position: absolute;
   top: 0;
   left: 0;
-`
+`;
 
-export const PData = styled.p `
+export const PData = styled.p`
   padding-right: 5px;
-`
+`;

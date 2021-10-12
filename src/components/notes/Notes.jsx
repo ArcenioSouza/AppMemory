@@ -12,7 +12,7 @@ const CardNotes = ({ notes, updateApi, setUpdateApi }) => {
             description={note.description}
             key={index}
             updateApi={updateApi}
-          setUpdateApi={setUpdateApi}
+            setUpdateApi={setUpdateApi}
           />
         );
       })}

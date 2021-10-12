@@ -3,7 +3,12 @@ import { api } from "../../services/api";
 import { useState } from "react";
 import * as S from "./styledCard";
 import { FcClock, FcCalendar } from "react-icons/fc";
-import { BsTrashFill, BsReplyFill, BsPencilSquare, BsSaveFill } from "react-icons/bs";
+import {
+  BsTrashFill,
+  BsReplyFill,
+  BsPencilSquare,
+  BsSaveFill,
+} from "react-icons/bs";
 
 const Card = ({
   id,
@@ -16,7 +21,6 @@ const Card = ({
   setUpdateApi,
   onClick,
 }) => {
-
   const [isEdit, setIsEdit] = useState(false);
   const [input, setInput] = useState({
     title: title,
@@ -74,22 +78,22 @@ const Card = ({
             />
             <S.ColumnInput>
               <S.Input
-                  type="text"
-                  name="calendar"
-                  id="data"
-                  value={input.calendar}
-                  placeholder="Ex: 10/04/2021"
-                  onChange={handleOnChange}
-                />
+                type="text"
+                name="calendar"
+                id="data"
+                value={input.calendar}
+                placeholder="Ex: 10/04/2021"
+                onChange={handleOnChange}
+              />
 
               <S.Input
-                  type="text"
-                  name="horario"
-                  id="hora"
-                  value={input.horario}
-                  placeholder="Ex: 14h00 ou 14:00"
-                  onChange={handleOnChange}
-                />
+                type="text"
+                name="horario"
+                id="hora"
+                value={input.horario}
+                placeholder="Ex: 14h00 ou 14:00"
+                onChange={handleOnChange}
+              />
             </S.ColumnInput>
             <S.ColumnInput>
               <S.FormP color="green">
@@ -134,13 +138,33 @@ const Card = ({
       <S.WrapperButtons>
         {isEdit ? (
           <>
-            <S.Button onClick={() => setIsEdit(false)}><S.Icon><BsReplyFill/></S.Icon>Back</S.Button>
-            <S.Button onClick={handleSalvar}><S.Icon><BsSaveFill/></S.Icon>Save</S.Button>
+            <S.Button onClick={() => setIsEdit(false)}>
+              <S.Icon>
+                <BsReplyFill />
+              </S.Icon>
+              Back
+            </S.Button>
+            <S.Button onClick={handleSalvar}>
+              <S.Icon>
+                <BsSaveFill />
+              </S.Icon>
+              Save
+            </S.Button>
           </>
         ) : (
           <>
-            <S.Button onClick={() => onClick(id)}><S.Icon><BsTrashFill/></S.Icon>Remove</S.Button>
-            <S.Button onClick={() => setIsEdit(true)}><S.Icon><BsPencilSquare/></S.Icon>Edit</S.Button>
+            <S.Button onClick={() => onClick(id)}>
+              <S.Icon>
+                <BsTrashFill />
+              </S.Icon>
+              Remove
+            </S.Button>
+            <S.Button onClick={() => setIsEdit(true)}>
+              <S.Icon>
+                <BsPencilSquare />
+              </S.Icon>
+              Edit
+            </S.Button>
           </>
         )}
       </S.WrapperButtons>
