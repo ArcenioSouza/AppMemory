@@ -12,7 +12,6 @@ const Container = styled.div`
   background: rgb(187, 115, 224);
   background: var(--gradient);
   width: 100%;
-  height: 100vh;
 `;
 
 const Wrapper = styled.div`
