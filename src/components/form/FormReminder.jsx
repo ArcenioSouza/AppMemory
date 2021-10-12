@@ -81,7 +81,7 @@ const P = styled.p`
   font-weight: bold;
 `;
 
-const Form = ({ onChange }) => {
+const FormReminder = ({ onChange }) => {
   return (
     <Container>
       <Sform>
@@ -182,4 +182,4 @@ const Form = ({ onChange }) => {
   );
 };
 
-export default Form;
+export default FormReminder;

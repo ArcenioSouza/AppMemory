@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import * as S from "./reminder.module.css";
 import Button from "../../components/button/Button";
 import Cards from "../../components/cards/Cards";
-import Form from "../../components/form/Form";
+import FormReminder from "../../components/form/FormReminder";
 import { api } from "../../services/api";
 
 const Reminder = () => {
@@ -71,7 +71,7 @@ const Reminder = () => {
         ) : (
           <Button texto="Salvar Lembrete" action={handleSave} />
         )}
-        {form ? <Form onChange={handleOnChange} /> : ""}
+        {form ? <FormReminder onChange={handleOnChange} /> : ""}
         <br />
         <h1>Reminder Cards</h1>
       </div>

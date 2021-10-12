@@ -2,6 +2,7 @@ import React from "react";
 import * as S from "./styledNote"
 import { api } from "../../services/api";
 import { useState } from "react";
+import { BsTrashFill, BsReplyFill, BsPencilSquare, BsSaveFill } from "react-icons/bs";
 
 const Note = ({ id, title, description, updateApi, setUpdateApi }) => {
   const [editForm, setEditForm] = useState({
@@ -55,15 +56,15 @@ const Note = ({ id, title, description, updateApi, setUpdateApi }) => {
 
         <S.WrapperButtons>
         {isEdit ? (
-          <>
-            <S.Button onClick={() => setIsEdit(false)}>Desfazer</S.Button>
-            <S.Button onClick={handleSalvar}>Salvar</S.Button>
-          </>
-          ) : (
-          <>
-            <S.Button onClick={handleRemove}>Remover</S.Button>
-            <S.Button onClick={() => setIsEdit(true)}>Editar</S.Button>
-          </>
+           <>
+           <S.Button onClick={() => setIsEdit(false)}><S.Icon><BsReplyFill/></S.Icon>Back</S.Button>
+           <S.Button onClick={handleSalvar}><S.Icon><BsSaveFill/></S.Icon>Save</S.Button>
+         </>
+       ) : (
+         <>
+           <S.Button onClick={handleRemove}><S.Icon><BsTrashFill/></S.Icon>Remove</S.Button>
+           <S.Button onClick={() => setIsEdit(true)}><S.Icon><BsPencilSquare/></S.Icon>Edit</S.Button>
+         </>
           )}
         </S.WrapperButtons>
       </S.InfoCards>

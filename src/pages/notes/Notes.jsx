@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Button from "../../components/button/Button";
 import CardNotes from "../../components/notes/Notes";
-import Form from "../../components/form/Form";
+import FormNote from "../../components/form/FormNote";
 import { api } from "../../services/api";
 import * as S from "./notes.module.css";
 
@@ -65,7 +65,7 @@ const Notes = () => {
           <Button texto="Salvar Anotação" action={handleSave} />
         )}
 
-        {form ? <Form onChange={handleOnChange} /> : ""}
+        {form ? <FormNote onChange={handleOnChange} /> : ""}
         <br />
         <h1>Notes Cards</h1>
       </div>
