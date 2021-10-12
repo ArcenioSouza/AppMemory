@@ -33,8 +33,10 @@ export const WrapperButtons = styled.div`
 `;
 
 export const Button = styled.button`
+  display: flex;
+  align-items: center;
   background-color: var(--second-color);
-  color: #fff;
+  color: #2b2b2b;
   padding: 5px 10px 5px 10px;
   margin-right: 10px;
   border: 1px solid #000;
@@ -48,6 +50,10 @@ export const Button = styled.button`
     color: #000;
   }
 `;
+
+export const Icon = styled.i`
+  margin-right: 3px;
+`
 
 export const Input = styled.input`
   font-size: 1rem;

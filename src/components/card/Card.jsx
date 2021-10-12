@@ -3,6 +3,7 @@ import { api } from "../../services/api";
 import { useState } from "react";
 import * as S from "./styledCard";
 import { FcClock, FcCalendar } from "react-icons/fc";
+import { BsTrashFill, BsReplyFill, BsPencilSquare, BsSaveFill } from "react-icons/bs";
 
 const Card = ({
   id,
@@ -133,13 +134,13 @@ const Card = ({
       <S.WrapperButtons>
         {isEdit ? (
           <>
-            <S.Button onClick={() => setIsEdit(false)}>Desfazer</S.Button>
-            <S.Button onClick={handleSalvar}>Salvar</S.Button>
+            <S.Button onClick={() => setIsEdit(false)}><S.Icon><BsReplyFill/></S.Icon>Back</S.Button>
+            <S.Button onClick={handleSalvar}><S.Icon><BsSaveFill/></S.Icon>Save</S.Button>
           </>
         ) : (
           <>
-            <S.Button onClick={() => onClick(id)}>Remover</S.Button>
-            <S.Button onClick={() => setIsEdit(true)}>Editar</S.Button>
+            <S.Button onClick={() => onClick(id)}><S.Icon><BsTrashFill/></S.Icon>Remove</S.Button>
+            <S.Button onClick={() => setIsEdit(true)}><S.Icon><BsPencilSquare/></S.Icon>Edit</S.Button>
           </>
         )}
       </S.WrapperButtons>
