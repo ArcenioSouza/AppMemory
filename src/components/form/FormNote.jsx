@@ -10,6 +10,11 @@ const Container = styled.div`
   margin: 0 5% 0 5%;
   border-radius: 10px;
   padding: 25px;
+
+  @media (max-width: 768px){
+    width: 90%;
+    padding: 10px;
+  }
 `;
 
 const Sform = styled.form`
@@ -41,6 +46,10 @@ const Label = styled.label`
   padding-right: 5px;
   font-size: 1.4rem;
   color: #000;
+
+  @media (max-width: 768px){
+    font-size: 0.8rem;
+  }
 `;
 
 const Input = styled.input`
@@ -54,6 +63,12 @@ const Input = styled.input`
   color: #000;
   :focus {
     outline-color: var(--primary-color);
+  }
+
+  @media (max-width: 768px){
+    font-size: 0.8rem;
+    padding: 5px 5px 5px 5px;
+    width: 95%;
   }
 `;
 

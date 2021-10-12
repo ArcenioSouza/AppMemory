@@ -10,6 +10,11 @@ const Container = styled.div`
   margin: 0 5% 0 5%;
   border-radius: 10px;
   padding: 25px;
+
+  @media (max-width: 768px){
+    width: 90%;
+    padding: 10px;
+  }
 `;
 
 const Sform = styled.form`
@@ -41,6 +46,10 @@ const Label = styled.label`
   padding-right: 5px;
   font-size: 1.4rem;
   color: #000;
+
+  @media (max-width: 768px){
+    font-size: 0.8rem;
+  }
 `;
 
 const Input = styled.input`
@@ -55,23 +64,24 @@ const Input = styled.input`
   :focus {
     outline-color: var(--primary-color);
   }
+
+  @media (max-width: 768px){
+    font-size: 0.8rem;
+    padding: 5px 5px 5px 5px;
+    width: 95%;
+  }
 `;
 
 const InputRadio = styled.input`
-  font-size: 1.2rem;
   border: 1px solid #000;
   border-radius: 5px;
   padding: 5px 0 5px 10px;
   margin: 5px;
-  background-color: #bc73e03b;
-  color: #000;
-  :focus {
-    outline-color: var(--primary-color);
-  }
 `;
 
 const P = styled.p`
   display: flex;
+  font-size: 1rem;
   align-items: center;
   background-color: ${(props) => props.color};
   padding: 5px;
@@ -79,6 +89,10 @@ const P = styled.p`
   color: #fff;
   border-radius: 5px;
   font-weight: bold;
+
+  @media (max-width: 768px){
+    font-size: 0.8rem;
+  }
 `;
 
 const FormReminder = ({ onChange }) => {
