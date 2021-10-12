@@ -55,14 +55,14 @@ const Notes = () => {
       <div className={S.form}>
         {isAdd ? (
           <Button
-            texto="Adicionar Anotação"
+            texto="Add Note"
             action={() => {
               setForm(true);
               setIsAdd(false);
             }}
           />
         ) : (
-          <Button texto="Salvar Anotação" action={handleSave} />
+          <Button texto="Save Note" action={handleSave} />
         )}
 
         {form ? <FormNote onChange={handleOnChange} /> : ""}

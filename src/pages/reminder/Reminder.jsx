@@ -62,14 +62,14 @@ const Reminder = () => {
       <div className={S.form}>
         {isAdd ? (
           <Button
-            texto="Adicionar Lembrete"
+            texto="Add Reminder"
             action={() => {
               setForm(true);
               setIsAdd(false);
             }}
           />
         ) : (
-          <Button texto="Salvar Lembrete" action={handleSave} />
+          <Button texto="Save Reminder" action={handleSave} />
         )}
         {form ? <FormReminder onChange={handleOnChange} /> : ""}
         <br />
